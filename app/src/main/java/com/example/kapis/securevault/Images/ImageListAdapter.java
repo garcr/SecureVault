@@ -1,12 +1,13 @@
-package com.example.kapis.securevault;
+package com.example.kapis.securevault.Images;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+
+import com.example.kapis.securevault.R;
 
 
 public class ImageListAdapter extends ArrayAdapter {
@@ -25,6 +26,7 @@ public class ImageListAdapter extends ArrayAdapter {
         if(null == convertView){
             convertView = inflater.inflate(R.layout.image_listview, parent, false);
         }
+
         GlideApp
                 .with(context)
                 .load(imageList[position])

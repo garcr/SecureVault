@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kapis.securevault">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -15,13 +15,12 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
@@ -31,6 +30,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6564506334217139~9613742390" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -41,23 +44,27 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".SplashScreen">
+        <activity android:name=".activity_SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondAuthentication" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activity_SecondAuth" />
+        <activity android:name=".activity_FoldersMain" />
         <activity
-            android:name=".ForgotPassword"
+            android:name=".activity_ForgotPassword"
             android:label="Forgot Password" />
         <activity
-            android:name=".Register"
+            android:name=".activity_Register"
             android:label="Register" />
-        <activity android:name=".LogInPage" />
-        <activity android:name=".ImageGalleryActivity" />
+        <activity android:name=".activity_LoginPage" />
+        <activity android:name=".activity_ImageGallery" />
+        <activity android:name=".activity_EnlargeImage" />
+        <activity android:name=".activity_Choice"></activity>
+        <activity android:name=".activity_NotesMain"></activity>
+
     </application>
 
 </manifest>

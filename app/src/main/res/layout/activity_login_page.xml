@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LogInPage"
+    tools:context=".activity_LoginPage"
     android:background="@color/colorBlue">
 
     <ImageView
@@ -59,6 +59,14 @@
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorGrey"
             android:textSize="15sp" />
+
+        <ProgressBar
+            android:id="@+id/login_ProgressBar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
         <Button
             android:id="@+id/login_SignIn"
